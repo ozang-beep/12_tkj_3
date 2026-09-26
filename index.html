@@ -1,0 +1,1078 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>12 TKJ 3 | SMK Global Mulia</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #020617;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(2, 6, 23, 0.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #1e293b;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.logo span {
+    color: #10b981;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(circle at 15% 20%, #1d4ed8, transparent 30%),
+        radial-gradient(circle at 85% 80%, #047857, transparent 30%),
+        #020617;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 18px;
+
+    border: 1px solid #38bdf8;
+    border-radius: 30px;
+
+    color: #7dd3fc;
+    background: rgba(56,189,248,.1);
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero h2 {
+    color: #10b981;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.buttons {
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.btn-primary {
+    background: #10b981;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #059669;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 1px solid #334155;
+    color: white;
+}
+
+.btn-secondary:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+/* ================= SECTION ================= */
+
+section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+}
+
+.section-title p {
+    color: #64748b;
+}
+
+/* ================= PROFIL ================= */
+
+.profile {
+    background: #0f172a;
+}
+
+.profile-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.profile-icon {
+    height: 270px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    font-size: 6rem;
+
+    background:
+        linear-gradient(135deg, #1d4ed8, #10b981);
+}
+
+.profile-text h3 {
+    color: #38bdf8;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.profile-text p {
+    color: #cbd5e1;
+}
+
+/* ================= KOMPETENSI ================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #0f172a;
+
+    padding: 25px;
+
+    border: 1px solid #1e293b;
+    border-radius: 15px;
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #38bdf8;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #94a3b8;
+}
+
+/* ================= MATERI ================= */
+
+.material {
+    background: #0f172a;
+}
+
+.material-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.material-item {
+    padding: 20px;
+
+    background: #020617;
+
+    border-left: 4px solid #10b981;
+    border-radius: 8px;
+}
+
+.material-item strong {
+    color: #38bdf8;
+}
+
+.material-item p {
+    color: #94a3b8;
+}
+
+/* ================= GALERI ================= */
+
+.gallery-section {
+    background: #020617;
+}
+
+/*
+6 FOTO
+3 KOLOM × 2 BARIS
+*/
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.gallery-item {
+    background: #0f172a;
+
+    padding: 8px;
+
+    border-radius: 14px;
+
+    border: 1px solid #1e293b;
+
+    overflow: hidden;
+
+    transition: .3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 9px;
+}
+
+.gallery-item p {
+    text-align: center;
+
+    color: #94a3b8;
+
+    padding: 10px 5px;
+
+    font-size: .9rem;
+}
+
+/* ================= VIDEO ================= */
+
+.video-section {
+    background: #0f172a;
+}
+
+.video-box {
+    max-width: 850px;
+    margin: auto;
+
+    background: #020617;
+
+    padding: 15px;
+
+    border-radius: 18px;
+
+    border: 1px solid #1e293b;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 480px;
+
+    border: none;
+
+    border-radius: 12px;
+}
+
+.video-caption {
+    padding: 15px;
+}
+
+.video-caption h3 {
+    color: #38bdf8;
+}
+
+.video-caption p {
+    color: #94a3b8;
+}
+
+/* ================= KEGIATAN ================= */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+
+    border-left: 3px solid #10b981;
+
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -40px;
+    top: 5px;
+
+    width: 15px;
+    height: 15px;
+
+    background: #38bdf8;
+
+    border-radius: 50%;
+}
+
+.timeline-item h3 {
+    color: #38bdf8;
+}
+
+.timeline-item p {
+    color: #94a3b8;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #020617;
+}
+
+.contact-box {
+    text-align: center;
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(135deg, #172554, #064e3b);
+}
+
+.contact-box h2 {
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: #cbd5e1;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    border-top: 1px solid #1e293b;
+
+    color: #64748b;
+}
+
+footer strong {
+    color: #38bdf8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 800px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .profile-box {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .material-list {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-box iframe {
+        height: 300px;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .video-box iframe {
+        height: 220px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+<div class="nav-container">
+
+<div class="logo">
+SMK <span>GLOBAL MULIA</span>
+</div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#profil">Profil</a></li>
+<li><a href="#kompetensi">Kompetensi</a></li>
+<li><a href="#materi">Materi</a></li>
+<li><a href="#galeri">Galeri</a></li>
+<li><a href="#video">Video</a></li>
+</ul>
+
+</div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<header class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+🏫 SMK GLOBAL MULIA
+</div>
+
+<h2>12 TEKNIK KOMPUTER DAN JARINGAN 3</h2>
+
+<h1>
+TECHNOLOGY
+<br>
+<span>NETWORKING</span>
+</h1>
+
+<p>
+Website dokumentasi dan informasi kegiatan
+siswa kelas 12 Teknik Komputer dan Jaringan 3.
+</p>
+
+<div class="buttons">
+
+<a href="#profil" class="btn btn-primary">
+🚀 Jelajahi Website
+</a>
+
+<a href="#galeri" class="btn btn-secondary">
+📸 Lihat Galeri
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ================= PROFIL ================= -->
+
+<section class="profile" id="profil">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Profil Kelas</h2>
+
+<p>
+SMK Global Mulia
+</p>
+
+</div>
+
+
+<div class="profile-box">
+
+<div class="profile-icon">
+🖥️
+</div>
+
+<div class="profile-text">
+
+<h3>12 Teknik Komputer dan Jaringan 3</h3>
+
+<p>
+Kelas 12 Teknik Komputer dan Jaringan 3 merupakan
+bagian dari program keahlian teknologi jaringan
+komputer di SMK Global Mulia.
+</p>
+
+<br>
+
+<p>
+Kegiatan pembelajaran meliputi perakitan komputer,
+instalasi sistem operasi, konfigurasi jaringan,
+MikroTik, server, troubleshooting dan berbagai
+praktik teknologi informasi.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= KOMPETENSI ================= -->
+
+<section id="kompetensi">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Kompetensi Keahlian</h2>
+
+<p>
+Materi dan kemampuan yang dipelajari
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+<div class="card-icon">💻</div>
+<h3>Hardware</h3>
+<p>
+Merakit, merawat dan melakukan
+troubleshooting komputer.
+</p>
+</div>
+
+
+<div class="card">
+<div class="card-icon">🌐</div>
+<h3>Networking</h3>
+<p>
+Membangun LAN, WLAN, WAN,
+routing dan switching.
+</p>
+</div>
+
+
+<div class="card">
+<div class="card-icon">📡</div>
+<h3>MikroTik</h3>
+<p>
+DHCP, DNS, NAT, firewall,
+routing dan VLAN.
+</p>
+</div>
+
+
+<div class="card">
+<div class="card-icon">🖥️</div>
+<h3>Server</h3>
+<p>
+Instalasi sistem operasi dan
+konfigurasi layanan server.
+</p>
+</div>
+
+
+<div class="card">
+<div class="card-icon">🔐</div>
+<h3>Security</h3>
+<p>
+Mempelajari dasar keamanan
+jaringan dan perlindungan data.
+</p>
+</div>
+
+
+<div class="card">
+<div class="card-icon">⚙️</div>
+<h3>Troubleshooting</h3>
+<p>
+Menganalisis dan menyelesaikan
+masalah komputer dan jaringan.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MATERI ================= -->
+
+<section class="material" id="materi">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>📚 Materi TKJ</h2>
+
+<p>
+Materi pembelajaran kelas 12
+</p>
+
+</div>
+
+
+<div class="material-list">
+
+<div class="material-item">
+<strong>01. Jaringan Komputer</strong>
+<p>LAN, WAN, WLAN dan topologi jaringan.</p>
+</div>
+
+<div class="material-item">
+<strong>02. IP Address</strong>
+<p>IPv4, subnetting, gateway dan DNS.</p>
+</div>
+
+<div class="material-item">
+<strong>03. VLAN</strong>
+<p>Segmentasi jaringan menggunakan VLAN.</p>
+</div>
+
+<div class="material-item">
+<strong>04. MikroTik</strong>
+<p>DHCP, DNS, NAT, routing dan firewall.</p>
+</div>
+
+<div class="material-item">
+<strong>05. Cisco Packet Tracer</strong>
+<p>Simulasi jaringan dan konfigurasi perangkat.</p>
+</div>
+
+<div class="material-item">
+<strong>06. Sistem Operasi</strong>
+<p>Instalasi Windows dan Linux.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GALERI 6 FOTO ================= -->
+
+<section class="gallery-section" id="galeri">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>📸 Galeri Dokumentasi</h2>
+
+<p>
+Dokumentasi kegiatan 12 TKJ 3
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+
+<!-- FOTO 1 -->
+
+<div class="gallery-item">
+
+<img src="foto/foto1.jpg" alt="Dokumentasi TKJ 1">
+
+<p>
+Praktik Teknik Komputer dan Jaringan
+</p>
+
+</div>
+
+
+<!-- FOTO 2 -->
+
+<div class="gallery-item">
+
+<img src="foto/foto2.jpg" alt="Dokumentasi TKJ 2">
+
+<p>
+Kegiatan Praktik Jaringan
+</p>
+
+</div>
+
+
+<!-- FOTO 3 -->
+
+<div class="gallery-item">
+
+<img src="foto/foto3.jpg" alt="Dokumentasi TKJ 3">
+
+<p>
+Konfigurasi Perangkat Jaringan
+</p>
+
+</div>
+
+
+<!-- FOTO 4 -->
+
+<div class="gallery-item">
+
+<img src="foto/foto4.jpg" alt="Dokumentasi TKJ 4">
+
+<p>
+Praktik MikroTik
+</p>
+
+</div>
+
+
+<!-- FOTO 5 -->
+
+<div class="gallery-item">
+
+<img src="foto/foto5.jpg" alt="Dokumentasi TKJ 5">
+
+<p>
+Kegiatan Pembelajaran TKJ
+</p>
+
+</div>
+
+
+<!-- FOTO 6 -->
+
+<div class="gallery-item">
+
+<img src="foto/foto6.jpg" alt="Dokumentasi TKJ 6">
+
+<p>
+Dokumentasi Kelas 12 TKJ 3
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= VIDEO ================= -->
+
+<section class="video-section" id="video">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🎬 Video Dokumentasi</h2>
+
+<p>
+Dokumentasi video kegiatan TKJ
+</p>
+
+</div>
+
+
+<div class="video-box">
+
+<!--
+GANTI ID_VIDEO_YOUTUBE
+dengan ID video YouTube kamu.
+
+Contoh:
+https://www.youtube.com/watch?v=ABC123
+
+Maka:
+https://www.youtube.com/embed/ABC123
+-->
+
+<iframe
+src="https://www.youtube.com/embed/ID_VIDEO_YOUTUBE"
+title="Video Dokumentasi TKJ"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+
+<div class="video-caption">
+
+<h3>🎥 Dokumentasi Praktik TKJ</h3>
+
+<p>
+Video kegiatan pembelajaran dan praktik
+siswa kelas 12 Teknik Komputer dan Jaringan 3
+SMK Global Mulia.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= KEGIATAN ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🚀 Kegiatan TKJ</h2>
+
+<p>
+Perjalanan pembelajaran dan praktik
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>💻 Perakitan PC</h3>
+
+<p>
+Mengenal komponen komputer dan melakukan
+praktik perakitan PC.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>🌐 Instalasi Jaringan</h3>
+
+<p>
+Membuat kabel jaringan dan melakukan
+konfigurasi perangkat.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>📡 Konfigurasi MikroTik</h3>
+
+<p>
+Melakukan konfigurasi DHCP, DNS,
+VLAN, routing dan firewall.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>🎓 Proyek Akhir</h3>
+
+<p>
+Membuat proyek teknologi sebagai
+dokumentasi pembelajaran dan portofolio.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>
+🏫 SMK GLOBAL MULIA
+</h2>
+
+<h3>
+12 TEKNIK KOMPUTER DAN JARINGAN 3
+</h3>
+
+<br>
+
+<p>
+💻 Computer &nbsp; | &nbsp;
+🌐 Networking &nbsp; | &nbsp;
+📡 MikroTik &nbsp; | &nbsp;
+🔐 Security
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+© 2026
+<strong>12 Teknik Komputer dan Jaringan 3</strong>
+</p>
+
+<p>
+SMK Global Mulia • Website Pembelajaran & Dokumentasi
+</p>
+
+</footer>
+
+</body>
+</html>
+```
